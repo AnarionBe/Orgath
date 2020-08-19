@@ -1,9 +1,10 @@
 import React from 'react'
+import {Home} from './pages/index'
 
 export default () => {
   return (
-    <div className="app">
-      
-    </div>
+    <>
+      <Home />
+    </>
   );
 }

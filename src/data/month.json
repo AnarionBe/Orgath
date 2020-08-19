@@ -1,0 +1,74 @@
+[
+  {
+    "fr": "Janvier",
+    "en": "January",
+    "fr_short": "Jan",
+    "en_short": "Jan"
+  },
+  {
+    "fr": "Février",
+    "en": "February",
+    "fr_short": "Fév",
+    "en_short": "Feb"
+  },
+  {
+    "fr": "Mars",
+    "en": "March",
+    "fr_short": "Mar",
+    "en_short": "Mar"
+  },
+  {
+    "fr": "Avril",
+    "en": "April",
+    "fr_short": "Avr",
+    "en_short": "Apr"
+  },
+  {
+    "fr": "Mai",
+    "en": "May",
+    "fr_short": "Mai",
+    "en_short": "May"
+  },
+  {
+    "fr": "Juin",
+    "en": "June",
+    "fr_short": "Jun",
+    "en_short": "Jun"
+  },
+  {
+    "fr": "Juillet",
+    "en": "July",
+    "fr_short": "Jul",
+    "en_short": "Jul"
+  },
+  {
+    "fr": "Août",
+    "en": "August",
+    "fr_short": "Aoû",
+    "en_short": "Aug"
+  },
+  {
+    "fr": "Septembre",
+    "en": "September",
+    "fr_short": "Sep",
+    "en_short": "Sep"
+  },
+  {
+    "fr": "Octobre",
+    "en": "October",
+    "fr_short": "Oct",
+    "en_short": "Oct"
+  },
+  {
+    "fr": "Novembre",
+    "en": "November",
+    "fr_short": "Nov",
+    "en_short": "Nov"
+  },
+  {
+    "fr": "Décembre",
+    "en": "December",
+    "fr_short": "Dec",
+    "en_short": "Dec"
+  }
+]
