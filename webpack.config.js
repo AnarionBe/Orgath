@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
 	entry: ['./src/index.js'],
@@ -40,7 +41,8 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: "./src/index.html",
 			filename: "index.html"
-		})
+		}),
+		new Dotenv()
 	],
 	devServer: {
 		contentBase: path.join(__dirname, "./build"),
@@ -51,5 +53,6 @@ module.exports = {
 		hot: true,
 		disableHostCheck: true,
 		port: 8888,
-	}
+	},
+	node: { fs: 'empty' },
 };
