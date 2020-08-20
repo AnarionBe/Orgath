@@ -1,5 +1,5 @@
 import React from 'react'
-import {Clock} from '../containers/index'
+import {Clock, Weather} from '../containers/index'
 
 export const Home = ({}) => {
   return (
@@ -7,6 +7,8 @@ export const Home = ({}) => {
       <Clock
         width="10"
       />
+
+      <Weather />
     </div>
   );
 }
