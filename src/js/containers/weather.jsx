@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
-import { faSync } from '@fortawesome/free-solid-svg-icons'
+import { faSync, faSpinner } from '@fortawesome/free-solid-svg-icons'
 
 export const Weather = ({width = 1, height = 1, x = 0, y = 0}) => {
   const [weather, setWeather] = useState(null);
@@ -64,7 +64,7 @@ export const Weather = ({width = 1, height = 1, x = 0, y = 0}) => {
 
   return (
     <div className="weather flex f-center" style={getStyle()}>
-      {!weather && 'loading...'}
+      {!weather && <Icon icon={faSpinner} className="fa-spin" />}
       {weather && renderWeather()}
     </div>
   );

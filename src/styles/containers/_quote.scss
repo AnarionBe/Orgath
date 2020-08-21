@@ -1,0 +1,14 @@
+.quote {
+  $root: '.quote';
+  padding: 1rem;
+
+  #{$root}__content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: .5rem;
+  }
+
+  #{$root}__author {
+    font-style: italic;
+  }
+}
