@@ -12,7 +12,7 @@ Orgath's purpose is to be a personnal organiser. It's inspired on the android's 
 [Weather API](https://openweathermap.org/)
 [Quote API](https://quotes.rest/)
 
-## Roadmap
+## Features
 - [x] Grid system
 - [x] Clock module
 - [x] Weather module
@@ -21,3 +21,8 @@ Orgath's purpose is to be a personnal organiser. It's inspired on the android's 
 - [ ] Planning module
 - [ ] Todo module
 - [ ] Any ideas ?
+
+## Todos
+- [ ] Implement features
+- [ ] Design (I hate that part)
+- [ ] Custom ecosystem
