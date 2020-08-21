@@ -1,0 +1,16 @@
+.flex {
+  display: flex;
+
+  &.f-around {
+    justify-content: space-around;
+  }
+
+  &.f-middle {
+    align-items: center;
+  }
+
+  &.f-center {
+    justify-content: space-around;
+    align-items: center;
+  }
+}

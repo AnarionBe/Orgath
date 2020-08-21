@@ -1,0 +1,10 @@
+.weather {
+  $root: '.weather';
+  
+  #{$root}__reload {
+    height: 2rem;
+    background-color: transparent;
+    border: none;
+    outline:none;
+  }
+}
