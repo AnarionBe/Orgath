@@ -20,6 +20,7 @@ Orgath's purpose is to be a personnal organiser. It's inspired on the android's 
 - [ ] Agenda module
 - [ ] Planning module
 - [ ] Todo module
+- [ ] Configuration sytem
 - [ ] Any ideas ?
 
 ## Todos
