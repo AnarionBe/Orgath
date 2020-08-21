@@ -43,7 +43,6 @@ export const Weather = ({width = 1, height = 1, x = 0, y = 0}) => {
   }
 
   const renderWeather = () => {
-    console.log(weather);
     return (
       <>
         <div>
@@ -51,7 +50,7 @@ export const Weather = ({width = 1, height = 1, x = 0, y = 0}) => {
             className="block"
             src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}.png`}
           />
-          <span className="block">{weather.main.temp} °C</span>
+          <span className="block">{Math.round(weather.main.temp)} °C</span>
         </div>
         <button
           onClick={() => setReload(!reload)}
