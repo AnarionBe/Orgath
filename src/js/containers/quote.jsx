@@ -2,9 +2,11 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
+import {useGrid} from '../hooks/index'
 
-export const Quote = ({width = 1, height = 1, x = 0, y = 0}) => {
+export const Quote = ({coords}) => {
   const [quote, setQuote] = useState(null);
+  const displayStyle = useGrid(coords);
 
   useEffect(() => {
     const fecthQuote = async () => {
@@ -26,28 +28,15 @@ export const Quote = ({width = 1, height = 1, x = 0, y = 0}) => {
     });
   }, []);
 
-  const renderQuote = () => {
-    return (
-      <>
-        <q className="quote__content block">{quote.quote}</q>
-        <i className="quote__author block">--{quote.author}--</i>
-      </>
-    );
-  }
-
-  const getStyle = () => {
-    return {
-      gridColumnStart: x,
-      gridColumnEnd: `span ${width}`,
-      gridRowStart: y,
-      gridRowEnd: `span ${height}`
-    };
-  }  
-
   return (
-    <div className="quote" style={getStyle()}>
+    <div className="quote" style={displayStyle}>
       {!quote && <Icon icon={faSpinner} className="fa-spin" />}
-      {quote && renderQuote()}
+      {quote && (
+        <>
+          <q className="quote__content block">{quote.quote}</q>
+          <i className="quote__author block">--{quote.author}--</i>
+        </>
+      )}
     </div>
   );
 }

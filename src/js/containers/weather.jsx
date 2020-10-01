@@ -2,11 +2,13 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
 import { faSync, faSpinner } from '@fortawesome/free-solid-svg-icons'
+import {useGrid} from '../hooks/index'
 
-export const Weather = ({width = 1, height = 1, x = 0, y = 0}) => {
+export const Weather = ({coords}) => {
   const [weather, setWeather] = useState(null);
   const [reload, setReload] = useState(false);
   const [animation, setAnimation] = useState(''); //fa-spin
+  const displayStyle = useGrid(coords);
 
   useEffect(() => {
     let timeoutId = null;
@@ -33,39 +35,26 @@ export const Weather = ({width = 1, height = 1, x = 0, y = 0}) => {
     });
   }, [reload]);
 
-  const getStyle = () => {
-    return {
-      gridColumnStart: x,
-      gridColumnEnd: `span ${width}`,
-      gridRowStart: y,
-      gridRowEnd: `span ${height}`
-    };
-  }
-
-  const renderWeather = () => {
-    return (
-      <>
-        <div>
-          <img
-            className="block"
-            src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}.png`}
-          />
-          <span className="block">{Math.round(weather.main.temp)} °C</span>
-        </div>
-        <button
-          onClick={() => setReload(!reload)}
-          className="weather__reload"
-        >
-          <Icon icon={faSync} className={animation} />
-        </button>
-      </>
-    )
-  }
-
   return (
-    <div className="weather flex f-center" style={getStyle()}>
+    <div className="weather flex f-center" style={displayStyle}>
       {!weather && <Icon icon={faSpinner} className="fa-spin" />}
-      {weather && renderWeather()}
+      {weather && (
+        <>
+          <div>
+            <img
+              className="block"
+              src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}.png`}
+            />
+            <span className="block">{Math.round(weather.main.temp)} °C</span>
+          </div>
+          <button
+            onClick={() => setReload(!reload)}
+            className="weather__reload"
+          >
+            <Icon icon={faSync} className={animation} />
+          </button>
+        </>
+      )}
     </div>
   );
 }

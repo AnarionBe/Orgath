@@ -4,9 +4,9 @@ import {Clock, Weather, Quote} from '../containers/index'
 export const Home = ({}) => {
   return (
     <div className="home">
-      <Clock width="9" />
-      <Weather x="10" />
-      <Quote y="10" width="10" />
+      <Clock coords={{width: 9}} />
+      <Weather coords={{x: 10}} />
+      <Quote coords={{y: 10, width: 10}} />
     </div>
   );
 }

@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from 'react'
-
+import {useGrid} from '../hooks/index'
 import months from '../../data/month.json'
 
-export const Clock = ({monthFormat = 'fr', width = 1, height = 1, x = 0, y = 0}) => {
+export const Clock = ({monthFormat = 'fr', coords}) => {
   const [date, setDate] = useState(new Date());
+  const displayStyle = useGrid(coords);
 
   useEffect(() => {
     let timeoutId = null;
@@ -28,17 +29,8 @@ export const Clock = ({monthFormat = 'fr', width = 1, height = 1, x = 0, y = 0})
     return `${('0' + date.getHours()).slice(-2)}:${('0' + date.getMinutes()).slice(-2)}`;
   }
 
-  const getStyle = () => {
-    return {
-      gridColumnStart: x,
-      gridColumnEnd: `span ${width}`,
-      gridRowStart: y,
-      gridRowEnd: `span ${height}`
-    };
-  }
-
   return (
-    <div className="clock" style={getStyle()}>
+    <div className="clock" style={displayStyle}>
       <div className="clock__time">{formatTime()}</div>
       <div className="clock__date">{formatDate()}</div>
     </div>
