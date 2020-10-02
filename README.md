@@ -20,7 +20,7 @@ Orgath's purpose is to be a smart display. It's inspired on the android's widget
 - [x] Clock module
 - [x] Weather module
 - [x] Quote module
-- [ ] Todo module - WIP
+- [x] Todo module
 - [ ] Agenda module
 - [ ] Planning module
 - [ ] And more...

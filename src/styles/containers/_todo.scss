@@ -1,0 +1,23 @@
+.todo {
+  $root: '.todo';
+
+  padding: 1rem;
+
+  #{$root}__header {
+    display: flex;
+
+    #{$root}__input {
+      flex: 1;
+    }
+  }
+
+  #{$root}__list-item-value {
+    &.-is-checked {
+      text-decoration: line-through;
+    }
+  }
+
+  #{$root}__list-item-checkbox {
+    margin: .5rem 1rem 0 0;
+  }
+}
