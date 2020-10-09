@@ -2,6 +2,7 @@
   $root: '.todo';
 
   padding: 1rem;
+  overflow: auto;
 
   #{$root}__header {
     display: flex;

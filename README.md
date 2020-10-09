@@ -22,12 +22,13 @@ Orgath's purpose is to be a smart display. It's inspired on the android's widget
 - [x] Quote module
 - [x] Todo module
 - [ ] Agenda module
-- [ ] Planning module
+- [x] Planning module
 - [ ] And more...
 
 ## Todos
 - [ ] Implement features
 - [ ] Implement modules
 - [ ] Design (I hate that part)
-- [ ] Custom ecosystem
 - [x] Hook to manage grid display
+- [ ] Create server
+- [ ] Link module to server

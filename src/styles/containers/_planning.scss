@@ -1,0 +1,41 @@
+.planning {
+  $root: '.planning';
+
+  padding: 1rem;
+  overflow: auto;
+
+  #{$root}__list {
+    border: 1px solid lightgray;
+  }
+
+  #{$root}__list-item {
+    display: flex;
+    flex-direction: column;
+
+    padding: .5rem 0;
+
+    & + #{$root}__list-item {
+      border-top: 1px solid lightgray;
+    }
+
+    & a {
+      display: flex;
+    }
+  }
+
+  #{$root}__list-hour {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: .25rem;
+    width: 2rem;
+  }
+
+  #{$root}__list-content {
+    padding: .25rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
