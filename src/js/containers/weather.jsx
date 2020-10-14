@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import axios from 'axios'
+import Axios from 'axios'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
 import { faSync, faSpinner } from '@fortawesome/free-solid-svg-icons'
 import {useGrid} from '../hooks/index'
@@ -15,7 +15,7 @@ export const Weather = ({coords}) => {
 
     const fecthWeather = async () => {
       setAnimation('fa-spin');
-      const {data} = await axios.get('https://api.openweathermap.org/data/2.5/weather', {
+      const {data} = await Axios.get('https://api.openweathermap.org/data/2.5/weather', {
         params: {
           q: 'Liege',
           appid: process.env.REACT_APP_WEATHER_API_KEY,

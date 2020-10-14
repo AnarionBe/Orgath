@@ -12,13 +12,22 @@
     }
   }
 
+  #{$root}__list-item {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 0;
+    font-size: 1.1rem;
+  }
+
   #{$root}__list-item-value {
     &.-is-checked {
       text-decoration: line-through;
     }
   }
 
-  #{$root}__list-item-checkbox {
-    margin: .5rem 1rem 0 0;
+  #{$root}__list-item-delete {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
   }
 }
