@@ -15,7 +15,7 @@ export const useApi = (target) => {
   }
 
   const put = (id, body) => {
-    return new Promise(async (resolve, request) => {
+    return new Promise(async (resolve, reject) => {
       try {
         const {data} = await Axios.put(`${endpoint}/${id ? id : ''}`, body);
         resolve(data);
