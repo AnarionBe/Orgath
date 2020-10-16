@@ -8,18 +8,38 @@
     border: 1px solid lightgray;
   }
 
-  #{$root}__list-item {
+  #{$root}__list-gap {
     display: flex;
     flex-direction: column;
 
     padding: .5rem 0;
 
-    & + #{$root}__list-item {
+    & + #{$root}__list-gap {
       border-top: 1px solid lightgray;
     }
 
     & a {
       display: flex;
+    }
+  }
+
+  #{$root}__header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding: .5rem;
+
+    span {
+      margin-right: .5rem;
+    }
+  }
+
+  #{$root}__date-picker {
+    margin-top: 1rem;
+    display: none;
+
+    &.-is-visible {
+      display: block;
     }
   }
 
@@ -37,5 +57,17 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    display: flex;
+    flex-direction: column;
+
+    #{$root}__list-item {
+      & + #{$root}__list-item {
+        margin-top: .5rem;
+      }
+
+      .time {
+        font-size: .7rem;
+      }
+    }
   }
 }
