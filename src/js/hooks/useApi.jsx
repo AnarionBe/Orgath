@@ -3,10 +3,10 @@ import Axios from "axios"
 export const useApi = (target) => {
   const endpoint = `${process.env.SERVER_ENDPOINT}/${target}`;
   
-  const get = (id, body = {}) => {
+  const get = (id, body) => {
     return new Promise(async (resolve, reject) => {
       try {
-        const {data} = await Axios.get(`${endpoint}/${id ? id : ''}`, body);
+        const {data} = await Axios.get(`${endpoint}/${id ? id : ''}`, {params: body});
         resolve(data);
       } catch(err) {
         reject(err);
