@@ -1,0 +1,13 @@
+.textarea {
+  $root: '.textarea';
+
+  display: flex;
+  flex-direction: column;
+
+  #{$root}__field {
+    border-radius: 6px;
+    border: 1px solid black;
+    padding: .5rem;
+    margin-top: .5rem;
+  }
+}
