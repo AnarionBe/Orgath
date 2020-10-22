@@ -70,4 +70,51 @@
       }
     }
   }
+
+  #{$root}__form-create {
+    display: flex;
+    flex-direction: column;
+
+    #{$root}__form-create-field {
+      width: 500px;
+
+      & + #{$root}__form-create-field {
+        margin-top: 1rem;
+      }
+
+      &.hour {
+        display: flex;
+        align-items: center;
+
+        & > :nth-child(2) {
+          font-size: 1.2rem;
+          margin: 0 1rem 0 .5rem;
+        }
+      }
+    }
+
+    .react-calendar {
+      width: 100%;
+    }
+
+    #{$root}__form-create-label {
+      display: block;
+      margin-bottom: .5rem;
+    }
+  }
+
+  #{$root}__modal {
+    flex-direction: column;
+
+    & #{$root}__form-create-actions {
+      width: 100%;
+      margin-top: 1rem;
+      display: flex;
+      justify-content: flex-end;
+
+      .button + .button {
+        margin-left: 1rem;
+      }
+    }
+  }
 }
