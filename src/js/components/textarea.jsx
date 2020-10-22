@@ -13,7 +13,7 @@ export const Textarea =  ({
       <textarea
         className="textarea__field"
         value={value}
-        onChange={onChange}
+        onChange={e => onChange(e.target.value)}
         placeholder={placeholder}
       />
     </div>

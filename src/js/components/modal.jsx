@@ -19,7 +19,8 @@ export const Modal = ({
         <header className={`modal__header ${headerClass}`}>
           <h1 className="modal__title">{title}</h1>
           <Button
-            type="outline"
+            appearance="outline"
+            size="s"
             onClick={onClose}
           ><Icon icon={faTimes} /></Button>
         </header>
