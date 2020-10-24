@@ -29,7 +29,7 @@ jobs:
       id: build
       run: npm run build
     - name: Deploy
-      if: steps.build.success()
+      if: steps.build.success
       uses: peaceiris/actions-gh-pages@v3.7.2
       with:
         github_token: ${{ secrets.GH_TOKEN }}
