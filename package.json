@@ -6,9 +6,7 @@
   "homepage": "anarionbe.github.io/Orgath",
   "scripts": {
     "start": "webpack-dev-server -d --hot --config webpack.config.js --watch --host 0.0.0.0",
-    "build": "webpack --mode production",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -29,7 +27,6 @@
     "babel-loader": "^8.1.0",
     "css-loader": "^3.5.3",
     "dotenv-webpack": "^2.0.0",
-    "gh-pages": "^3.1.0",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
     "sass-loader": "^8.0.2",
