@@ -5,7 +5,7 @@ const Dotenv = require('dotenv-webpack');
 module.exports = {
 	entry: ['./src/index.js'],
 	output: {
-			path: __dirname + '/build',
+			path: __dirname + '/docs',
 			publicPath: '/',
 			filename: 'bundle.js'
 	},
@@ -52,7 +52,7 @@ module.exports = {
 		new Dotenv()
 	],
 	devServer: {
-		contentBase: path.join(__dirname, "./build"),
+		contentBase: path.join(__dirname, "./docs"),
 		watchContentBase: true,
 		historyApiFallback: true,
 		inline: true,
