@@ -1,7 +1,7 @@
 import Axios from "axios"
 
 export const useApi = (target) => {
-  const endpoint = `${process.env.SERVER_ENDPOINT || 'https://orgath.herokuapp.com/'}/${target}`;
+  const endpoint = `${process.env.SERVER_ENDPOINT || 'https://orgath.herokuapp.com'}/${target}`;
   
   const get = (id, body) => {
     return new Promise(async (resolve, reject) => {
