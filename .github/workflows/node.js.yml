@@ -25,8 +25,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
-    - run: npm run build
+    - name: build
+      id: build
+      run: npm run build
     - name: Deploy
+      if: steps.build.success()
       uses: peaceiris/actions-gh-pages@v3.7.2
       with:
         github_token: ${{ secrets.GH_TOKEN }}
