@@ -1,8 +1,9 @@
 import Axios from "axios"
+Axios.defaults.withCredentials = true;
 
 export const useApi = (target) => {
   const endpoint = `${process.env.SERVER_ENDPOINT ? process.env.SERVER_ENDPOINT : 'https://orgath.herokuapp.com'}/${target}`;
-  
+
   const get = (id, body) => {
     return new Promise(async (resolve, reject) => {
       try {
@@ -28,8 +29,9 @@ export const useApi = (target) => {
   const post = body => {
     return new Promise(async (resolve, reject) => {
       try {
-        const {data} = await Axios.post(endpoint, body);
-        resolve(data);
+        const res = await Axios.post(endpoint, body);
+        console.log(res)
+        resolve(res.data);
       } catch(err) {
         reject(err);
       }

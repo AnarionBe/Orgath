@@ -1,10 +1,23 @@
 import React from 'react'
-import {Home} from './pages/index'
+import {Switch, Route, BrowserRouter} from 'react-router-dom'
+
+import {Home, Login} from './pages/index'
+import {component as Guarded} from './helpers/garded.jsx'
 
 export default () => {
   return (
-    <>
-      <Home />
-    </>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path='/'>
+          <Login />
+        </Route>
+
+        <Route exact path='/home'>
+          <Guarded>
+            <Home />
+          </Guarded>
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
 }
