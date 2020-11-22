@@ -2,22 +2,19 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
-import {useGrid} from '../hooks/index'
+import {useGrid, useApi} from '../hooks/index'
 
 export const Quote = ({coords}) => {
+  const api = useApi('quote');
   const [quote, setQuote] = useState(null);
   const displayStyle = useGrid(coords);
 
   useEffect(() => {
     const fecthQuote = async () => {
       let timeoutId = null;
-      const {data} = await axios.get('https://quotes.rest/qod', {
-        params: {
-          language: 'en'
-        }
-      });
+      const quote = await api.get();
 
-      setQuote(data.contents.quotes[0]);
+      setQuote(quote);
       timeoutId = setTimeout(fecthQuote, 3600000);
     }
 
