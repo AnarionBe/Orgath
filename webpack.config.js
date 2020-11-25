@@ -3,8 +3,8 @@ const path = require("path");
 const Dotenv = require('dotenv-webpack');
 
 module.exports = env => {
-	const entry = env && env.production ? './' : '/';
-	
+	const entry = env === 'production' ? './' : '/';
+
 	return {
 		entry: ['./src/index.js'],
 		output: {
