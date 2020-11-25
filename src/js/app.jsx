@@ -8,11 +8,11 @@ export default () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path='/'>
+        <Route exact path={process.env.ROOT || '/'}>
           <Login />
         </Route>
 
-        <Route exact path='/home'>
+        <Route exact path={`${process.env.ROOT || '/'}home`}>
           <Guarded>
             <Home />
           </Guarded>

@@ -6,7 +6,7 @@
   "homepage": "anarionbe.github.io/Orgath",
   "scripts": {
     "start": "webpack-dev-server -d --hot --config webpack.config.js --watch --host 0.0.0.0 --https",
-    "build": "webpack --mode production"
+    "build": "webpack --mode --env production"
   },
   "repository": {
     "type": "git",
