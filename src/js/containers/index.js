@@ -1,5 +1,0 @@
-export * from './clock.jsx'
-export * from './weather.jsx'
-export * from './quote.jsx'
-export * from './todo.jsx'
-export * from './planning.jsx'
