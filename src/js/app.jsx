@@ -6,13 +6,13 @@ import {component as Guarded} from './helpers/garded.jsx'
 
 export default () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.ROOT || '/Orgath/'}>
       <Switch>
-        <Route exact path={process.env.ROOT || '/'}>
+        <Route exact path='/'>
           <Login />
         </Route>
 
-        <Route exact path={`${process.env.ROOT || '/'}home`}>
+        <Route exact path={'/home'}>
           <Guarded>
             <Home />
           </Guarded>
