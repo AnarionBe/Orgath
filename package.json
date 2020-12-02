@@ -41,6 +41,7 @@
     "@fortawesome/react-fontawesome": "^0.1.11",
     "axios": "^0.19.2",
     "dayjs": "^1.9.3",
+    "logrocket": "^1.0.14",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-calendar": "^3.1.0",
