@@ -16,6 +16,7 @@ export const Planning = ({coords}) => {
   const [titleValue, setTitleValue] = useState('');
   const [descriptionValue, setDescriptionValue] = useState('');
   const [dateValue, setDateValue] = useState(dayjs().format());
+
   const displayStyle = useGrid(coords);
   const api = useApi('event');
 
@@ -49,12 +50,13 @@ export const Planning = ({coords}) => {
 
   const handleCreation = async () => {
     try {
-      await api.post({
+      const newItem = await api.post({
         title: titleValue,
         description: descriptionValue,
         date: dateValue
       });
   
+      setList([...list, newItem]);
       setDescriptionValue('');
       setTitleValue('');
       setDateValue(dayjs().format());
